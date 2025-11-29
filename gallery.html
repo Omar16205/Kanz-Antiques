@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANZ Collection - Historic Artifacts Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Georgia:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gallery_style.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <section class="featured-section">
+            <header id="home">
+                <div class="hamburger-menu" id="hamburger">
+                    <div class="hamburger-lines">
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                    </div>
+                </div>
+
+                <div class="mobile-menu-overlay" id="mobile-menu">
+                    <button class="mobile-menu-close" id="mobile-close">×</button>
+                    <nav class="mobile-menu-nav">
+                        <a href="index.html" class="mobile-nav-link">Home</a>
+                        <a href="#artifacts-grid" class="mobile-nav-link">Gallery</a>
+                        <a href="index.html#about" class="mobile-nav-link">About</a>
+                        <a href="index.html#events" class="mobile-nav-link">Events</a>
+                    </nav>
+                </div>
+
+                <div class="nav-container">
+                    <nav class="navbar">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="#artifacts-grid" class="nav-link">Gallery</a>
+                        <a href="index.html#about" class="nav-link">About</a>
+                        <a href="index.html#events" class="nav-link">Events</a>
+                    </nav>
+                </div>
+            </header>
+            
+            <header class="main-header">
+                <h1 class="main-title">KANZ Collection</h1>
+                <p class="main-subtitle">Discover timeless treasures from across the ages</p>
+            </header>
+        </section>
+
+        <section class="collection-overview">
+            <div class="stats-card">
+                <div class="stat-item">
+                    <div class="stat-number">15</div>
+                    <div class="stat-label">ARTIFACTS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">CENTURIES</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">COUNTRIES</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-input" placeholder="Search artifacts, periods, or origins...">
+                <div class="search-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="21 21l-4.35-4.35"></path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-filter">
+            <div class="category-group">
+                <div class="filter-buttons">
+                    <button class="filter-btn main-category-btn active" data-category="all">All Categories</button>
+                    <button class="filter-btn main-category-btn" data-category="books">Books</button>
+                    <button class="filter-btn main-category-btn" data-category="collectibles">Collectibles</button>
+                    <button class="filter-btn main-category-btn" data-category="academic">Academic Majors</button>
+                    <button class="filter-btn main-category-btn" data-category="memorabilia">Memorabilia</button>
+                    <button class="filter-btn main-category-btn" data-category="electronics">Vintage Electronics</button>
+                    <button class="filter-btn main-category-btn" data-category="armoury">Armoury</button>
+                    <button class="filter-btn main-category-btn" data-category="for-her">For Her</button>
+                    <button class="filter-btn main-category-btn" data-category="home">Home</button>
+                    <button class="filter-btn main-category-btn" data-category="countries">Countries</button>
+                    <button class="filter-btn main-category-btn" data-category="music">Music</button>
+                </div>
+            </div>
+
+            <div class="category-group">
+                <div class="subcategory-buttons" id="subcategories-books">
+                    <button class="subcategory-btn" data-category="books" data-subcategory="rare">Rare</button>
+                    <button class="subcategory-btn" data-category="books" data-subcategory="novels">Novels</button>
+                    <button class="subcategory-btn" data-category="books" data-subcategory="history">History</button>
+                    <button class="subcategory-btn" data-category="books" data-subcategory="kurdistan">Kurdistan</button>
+                    <button class="subcategory-btn" data-category="books" data-subcategory="iraq">Iraq</button>
+                    <button class="subcategory-btn" data-category="books" data-subcategory="palestine">Palestine</button>
+                    <button class="subcategory-btn" data-category="books" data-subcategory="poetry">Poetry</button>
+                    <button class="subcategory-btn" data-category="books" data-subcategory="religious">Religious</button>
+                    <button class="subcategory-btn" data-category="books" data-subcategory="islamic">Islamic</button>
+                    <button class="subcategory-btn" data-category="books" data-subcategory="christianity">Christianity</button>
+                    <button class="subcategory-btn" data-category="books" data-subcategory="judaism">Judaism</button>
+                    <button class="subcategory-btn" data-category="books" data-subcategory="comics">Comics</button>
+                    <button class="subcategory-btn" data-category="books" data-subcategory="magazines">Magazines</button>
+                </div>
+                <div class="subcategory-buttons" id="subcategories-collectibles">
+                    <button class="subcategory-btn" data-category="collectibles" data-subcategory="bank-notes">Bank Notes</button>
+                    <button class="subcategory-btn" data-category="collectibles" data-subcategory="coins">Coins</button>
+                    <button class="subcategory-btn" data-category="collectibles" data-subcategory="stamps">Stamps</button>
+                    <button class="subcategory-btn" data-category="collectibles" data-subcategory="cars">Cars</button>
+                    <button class="subcategory-btn" data-category="collectibles" data-subcategory="comics">Comics</button>
+                    <button class="subcategory-btn" data-category="collectibles" data-subcategory="magazines">Magazines</button>
+                    <button class="subcategory-btn" data-category="collectibles" data-subcategory="sculptures">Sculptures</button>
+                    <button class="subcategory-btn" data-category="collectibles" data-subcategory="taxidermy">Taxidermy</button>
+                    <button class="subcategory-btn" data-category="collectibles" data-subcategory="maps">Maps</button>
+                    <button class="subcategory-btn" data-category="collectibles" data-subcategory="antique-prints">Antique Prints</button>
+                </div>
+                <div class="subcategory-buttons" id="subcategories-academic">
+                    <button class="subcategory-btn" data-category="academic" data-subcategory="architecture">Architecture</button>
+                    <button class="subcategory-btn" data-category="academic" data-subcategory="medical">Medical</button>
+                    <button class="subcategory-btn" data-category="academic" data-subcategory="law">Law</button>
+                    <button class="subcategory-btn" data-category="academic" data-subcategory="pharmacy">Pharmacy</button>
+                </div>
+                <div class="subcategory-buttons" id="subcategories-memorabilia">
+                    <button class="subcategory-btn" data-category="memorabilia" data-subcategory="soviet">Soviet</button>
+                    <button class="subcategory-btn" data-category="memorabilia" data-subcategory="nazi">Nazi</button>
+                    <button class="subcategory-btn" data-category="memorabilia" data-subcategory="world-war">World War</button>
+                </div>
+                <div class="subcategory-buttons" id="subcategories-electronics">
+                    <button class="subcategory-btn" data-category="electronics" data-subcategory="typewriters">Typewriters</button>
+                    <button class="subcategory-btn" data-category="electronics" data-subcategory="televisions">Televisions</button>
+                    <button class="subcategory-btn" data-category="electronics" data-subcategory="cameras">Cameras</button>
+                </div>
+                <div class="subcategory-buttons" id="subcategories-armoury">
+                    <button class="subcategory-btn" data-category="armoury" data-subcategory="swords">Swords</button>
+                    <button class="subcategory-btn" data-category="armoury" data-subcategory="daggers">Daggers</button>
+                    <button class="subcategory-btn" data-category="armoury" data-subcategory="shields">Shields</button>
+                </div>
+                <div class="subcategory-buttons" id="subcategories-for-her">
+                    <button class="subcategory-btn" data-category="for-her" data-subcategory="jewellery">Jewellery</button>
+                    <button class="subcategory-btn" data-category="for-her" data-subcategory="trinkets">Trinkets</button>
+                </div>
+                <div class="subcategory-buttons" id="subcategories-home">
+                    <button class="subcategory-btn" data-category="home" data-subcategory="tea-sets">Tea Sets</button>
+                    <button class="subcategory-btn" data-category="home" data-subcategory="dinner-sets">Dinner Sets</button>
+                    <button class="subcategory-btn" data-category="home" data-subcategory="cutlery">Cutlery</button>
+                    <button class="subcategory-btn" data-category="home" data-subcategory="porcelain">Porcelain</button>
+                    <button class="subcategory-btn" data-category="home" data-subcategory="decorative-plates">Decorative Plates</button>
+                    <button class="subcategory-btn" data-category="home" data-subcategory="brass">Brass</button>
+                    <button class="subcategory-btn" data-category="home" data-subcategory="globe">Globe</button>
+                    <button class="subcategory-btn" data-category="home" data-subcategory="paintings">Paintings</button>
+                </div>
+                <div class="subcategory-buttons" id="subcategories-countries">
+                    <button class="subcategory-btn" data-category="countries" data-subcategory="british">British Antiques</button>
+                    <button class="subcategory-btn" data-category="countries" data-subcategory="egyptian">Egyptian Antiques</button>
+                    <button class="subcategory-btn" data-category="countries" data-subcategory="french">French Antiques</button>
+                </div>
+                <div class="subcategory-buttons" id="subcategories-music">
+                    <button class="subcategory-btn" data-category="music" data-subcategory="vinyls">Vinyls</button>
+                    <button class="subcategory-btn" data-category="music" data-subcategory="cds">CDs</button>
+                    <button class="subcategory-btn" data-category="music" data-subcategory="cassettes">Cassettes</button>
+                    <button class="subcategory-btn" data-category="music" data-subcategory="gramophones">Gramophones</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="artifacts-grid" class="artifacts-grid">
+        </section>
+    
+        <section class="pagination-section">
+            <div class="pagination-info" id="pagination-info-text"></div>
+            <div class="pagination-controls">
+                <button class="pagination-btn" id="prev-btn">&laquo; Previous</button>
+                <div class="pagination-numbers" id="pagination-numbers"></div>
+                <button class="pagination-btn" id="next-btn">Next &raquo;</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" id="modal-close">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image-section">
+                    <div class="modal-main-image-container">
+                        <img id="modal-display-image" class="modal-image" src="" alt="Main Artifact View">
+                    </div>
+                    
+                    <div class="modal-thumbnails" id="modal-thumbnails">
+                        </div>
+                </div>
+                <div class="modal-details-section">
+                    <h2 id="modal-title" class="modal-title"></h2>
+                    <div id="modal-era" class="modal-era"></div>
+                    <div id="modal-location" class="modal-location"></div>
+                    
+                    <div class="modal-divider"></div>
+                    
+                    <div id="modal-description" class="modal-description"></div>
+                    
+                <div class="modal-specs">
+    <h4>Specifications</h4>
+    <div class="spec-item">
+        <span class="spec-label">Period:</span>
+        <span class="spec-value" id="modal-period"></span>
+    </div>
+    <div class="spec-item">
+        <span class="spec-label">Origin:</span>
+        <span class="spec-value" id="modal-origin"></span>
+    </div>
+    <div class="spec-item">
+        <span class="spec-label">Type:</span>
+        <span class="spec-value" id="spec-type-value"></span>
+    </div>
+    <div class="spec-item">
+        <span class="spec-label">Rarity:</span>
+        <span class="spec-value" id="spec-rarity-value"></span>
+    </div>
+    <div class="spec-item">
+        <span class="spec-label">Availability:</span>
+        <span class="spec-value" id="spec-availability-value"></span>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h3>Kanz Antiques</h3>
+                <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pellentesque quis quam aliquet posuere.</p>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact-item">
+                        <a href="tel:07519055747" class="footer-contact-link">
+                            <img src="https://c.animaapp.com/me6w5kmneeC4Hg/img/-pngtree-white-call-icon-png-3562069-1.png" alt="Phone">
+                            <span>0751 905 5747</span>
+                        </a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <a href="mailto:Kanz.antiques@gmail.com" class="footer-contact-link">
+                            <img src="https://c.animaapp.com/me6w5kmneeC4Hg/img/email-envelope-white-icon-1-1.png" alt="Email">
+                            <span>Kanz.antiques@gmail.com</span>
+                        </a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <a href="mailto:Ayman@kanz.krd" class="footer-contact-link">
+                            <img src="https://c.animaapp.com/me6w5kmneeC4Hg/img/email-envelope-white-icon-1-1.png" alt="Email">
+                            <span>Ayman@kanz.krd</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-center">
+                <div class="footer-qr">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZiIvPgogIDx0ZXh0IHg9IjUwIiB5PSI1NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyI+UVIgQ29kZTwvdGV4dD4KPC9zdmc+" alt="QR Code">
+                </div>
+            </div>
+            
+            <div class="footer-right">
+                <div>
+                    <h3>Quick Links</h3>
+                    <div class="footer-quick-links">
+                        <a href="index.html#about">About us</a>
+                        <a href="#artifacts-grid">Our Collection</a>
+                        <a href="index.html#events">Events</a>
+                        <a href="#home">Back to top</a>
+                    </div>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social-links">
+                        <a href="https://www.instagram.com/kanz.classics/" class="footer-social-item">
+                            <img src="https://c.animaapp.com/me6w5kmneeC4Hg/img/2-22629-instagram-png-1.png" alt="Instagram">
+                            <span>Kanz.classics</span>
+                        </a>
+                        <a href="https://wa.me/447775385077" class="footer-social-item">
+                            <img src="https://c.animaapp.com/me6w5kmneeC4Hg/img/whatsapp-1.png" alt="WhatsApp">
+                            <span>+44 7775 385077</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <p class="footer-bottom">©2025 Kanz Antiques. All rights reserved. | Home of history</p>
+    </footer>
+
+    <script src="gallery_script.js"></script>
+</body>
+</html>

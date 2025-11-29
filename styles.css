@@ -7,7 +7,6 @@
     -webkit-font-smoothing: antialiased;
 }
 
-/* Additional breakpoints for better responsive behavior */
 @media (max-width: 1200px) and (min-width: 1025px) {
     .carousel-container {
         padding: 40px 30px;
@@ -57,18 +56,59 @@ html {
 }
 
 header {
-    background-image: url(assets/logo3.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    
     height: 100vh;
     width: 100vw;
-    background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
     overflow: hidden;
+    color: white;
+}
+
+.hero-video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .hero-video-container video {
+        min-width: 300%;
+        min-height: auto; 
+        
+        width: auto;
+        height: 100vh;
+        
+        object-fit: unset; 
+        
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.header-content {
+    position: relative;
+    z-index: 1; 
+    height: 100%;
+    width: 100%;
+}
+
+.nav-container, .hamburger-menu, .mobile-menu-overlay {
+    z-index: 2000; 
 }
 
 .nav-container {
@@ -86,7 +126,6 @@ header {
 .nav-container.hidden {
     transform: translateX(-50%) translateY(-100px);
 }
-
 .navbar {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -155,7 +194,7 @@ header {
 }
 
 #hero-title {
-    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-size: clamp(1.5rem, 8vw, 4rem);
     font-weight: bold;
     color: #D69E3C;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -460,7 +499,6 @@ header {
     transform: scale(1.05);
 }
 
-/* Events Section */
 .events-section {
     padding: 100px 40px;
     background: white;
@@ -611,6 +649,63 @@ header {
     padding: 40px 0;
 }
 
+/* --- MOBILE OPTIMIZATION (Max-width 768px) --- */
+@media (max-width: 768px) {
+    
+    .events-section {
+        /* Reduce horizontal padding on small screens */
+        padding: 60px 20px; 
+    }
+
+    .events-title {
+        /* Reduce font size for readability */
+        font-size: 40px; 
+    }
+
+    .events-header {
+        margin-bottom: 40px;
+    }
+
+    .events-tabs {
+        /* Allow tabs to wrap if necessary */
+        flex-wrap: wrap; 
+        /* Space the tabs out better when they wrap */
+        gap: 10px; 
+    }
+
+    .tab-btn {
+        /* Use fluid units to prevent overflow and ensure tabs are still legible */
+        flex-grow: 1;
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .events-grid {
+        /* Force a single column layout on mobile */
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .event-card {
+        padding: 20px;
+    }
+
+    .event-name {
+        /* Slightly reduce event name font size */
+        font-size: 22px; 
+    }
+
+    .event-date {
+        /* Slightly reduce date block padding on mobile */
+        padding: 10px; 
+    }
+    
+    .event-day {
+        /* Slightly reduce the size of the day number */
+        font-size: 30px; 
+    }
+}
+
 /* Footer */
 .footer {
     background: #4a0404;
@@ -698,7 +793,20 @@ header {
     width: 16px;
     height: 16px;
 }
-
+.footer-contact-link{
+    text-decoration: none;
+    color: white;
+}
+.footer-mail-link{
+    text-decoration: none;
+    color: white;
+}
+.footer-mail-link:hover {
+    color: #d69e3c;
+}
+.footer-contact-link:hover {
+    color: #d69e3c;
+}
 .footer-right {
     display: flex;
     flex-direction: column;
@@ -730,6 +838,7 @@ header {
 .footer-quick-links a:hover {
     color: #d69e3c;
 }
+
 
 .footer-social h3 {
     color: #d69e3c;
@@ -1021,13 +1130,13 @@ header {
     }
 
     .hero-container {
-        bottom: 15%;
+        bottom: 1%;
         width: 95%;
     }
 
     #hero-title {
         letter-spacing: 1px;
-        font-size: clamp(2rem, 7vw, 3.5rem);
+        font-size: clamp(rem, 7vw, 3.5rem);
     }
 
     #hero-text {
@@ -1127,11 +1236,11 @@ header {
     }
 
     .hero-container {
-        bottom: 20%;
+        bottom: 10%;
     }
 
     #hero-title {
-        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
         margin-bottom: 10px;
     }
 

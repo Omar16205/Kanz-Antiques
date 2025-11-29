@@ -7,7 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="home">
+<header id="home" class="hero-video-container"> 
+    
+    <video autoplay muted playsinline poster="assets/static-poster-image.jpg"> 
+        <source src="assets/kanz-logo.MP4" type="video/mp4">
+        <source src="assets/kanz-logo.MP4" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    
+    <div class="video-overlay"></div>
+
+    <div class="header-content">
         <div class="hamburger-menu" id="hamburger">
             <div class="hamburger-lines">
                 <div class="hamburger-line"></div>
@@ -38,7 +48,9 @@
             <h1 id="hero-title">Kanz Antiques</h1>
             <p id="hero-text">Home of the world's best antiques</p>
         </section>
-    </header>
+    </div>
+    
+</header>
 
     <main>
         <div class="carousel-container" id="gallery">
@@ -57,7 +69,7 @@
             <p class="caption" id="carousel-caption">
                 'The Swing' by Jean-Honoré Fragonard, 1767
             </p>
-            <a href="#gallery" class="explore-btn">Explore More</a>
+            <a href="gallery.html" class="explore-btn">Explore More</a>
         </div>
 
         <section class="about-section" id="about">
@@ -65,9 +77,9 @@
                 <div class="about-text">
                     <h2>Our Legacy</h2>
                     <div class="about-divider"></div>
-                    <p>Lorem ipsum <strong>dolor sit amet consectetur</strong> adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. <strong>Pulvinar vivamus fringilla</strong> lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-                    <p><strong>Lorem ipsum dolor sit amet</strong> consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+                    <p>Born into a family with <strong>over half a century of experience</strong> in the world of antiques, I grew up surrounded by history, craftsmanship, and stories engraved into timeless pieces. What began as a family tradition soon became a personal passion, collecting relics that spoke to me beyond their form. Over the years, I developed not just an eye for detail but a deep appreciation for the legacy behind every object. This love for preserving the past naturally evolved into Kanz, a space dedicated to celebrating treasures, heritage, and storytelling.</p>
+                    <p>With a background in digital content creation and <strong> over 50 million organic views and 250,000+ followers across platforms</strong>, I’ve learned the art of bringing stories to life. Through Kanz, I merge my expertise in storytelling with my lifelong fascination for antiquities, creating an online experience unlike any other. Every item curated here carries a tale of cultures, craftsmanship, and journeys across generations waiting to be rediscovered.</p>
+                    <p>At 20, I wanted to change how people, especially the youth, see antiques. While many antique dealers cater to the older audience, <strong>Kanz focuses on the youth </strong> as well as having something for everyone, offering treasures that speak to modern collectors with timeless taste. Beyond selling, Kanz aspires to create museum like experiences at exhibitions and events, where everyone has the chance not only to admire but to own a piece of history. This is more than a business, it’s a movement to revive appreciation for the past in the hearts of the present.</p>
                 </div>
                 <div class="about-image-wrapper">
                     <img class="about-image" src="https://c.animaapp.com/me6w5kmneeC4Hg/img/businessman-isolated-illustration-ai-generative-free-png-1.png" alt="Businessman">
@@ -75,15 +87,15 @@
             </div>
             <div class="stats-container">
                 <div class="stat-item">
-                    <h3 data-start-year="2023" class="stat-number years-experience">0</h3>
+                    <h3 data-start-year="1975" class="stat-number years-experience">0</h3>
                     <p>Years of<br>Experience</p>
                 </div>
                 <div class="stat-item">
-                    <h3 data-target="5000" class="stat-number">0</h3>
+                    <h3 data-target="1000" class="stat-number">0</h3>
                     <p>Rare Pieces</p>
                 </div>
                 <div class="stat-item">
-                    <h3 data-target="50" class="stat-number">0</h3>
+                    <h3 data-target="30" class="stat-number">0</h3>
                     <p>Countries</p>
                 </div>
             </div>
@@ -91,10 +103,14 @@
             <div class="featured-on-container">
                 <h3 class="featured-on-title">As Featured On</h3>
                 <div class="featured-logos">
-                    <img src="assets/rudaw logo.jpg" alt="Rudaw Media Network" class="featured-logo">
-                    <img src="assets/avamedia.png" alt="Rudaw Media Network" class="featured-logo">
-                    <img src="assets/DW.png" alt="Rudaw Media Network" class="featured-logo">
-                    <img src="assets/964.png" alt="Rudaw Media Network" class="featured-logo">
+                    <img src="assets/rudaw.png" alt="Rudaw Media Network" class="featured-logo">
+                    <img src="assets/k24.png" alt="K24 Media Network" class="featured-logo">
+                    <img src="assets/+964.png" alt="+964 Media Network" class="featured-logo">
+                    <img src="assets/kurdsat.jpg" alt="Kurdsat Media Network" class="featured-logo">
+                    <img src="assets/kurdistan.png" alt="Kurdistan Media Network" class="featured-logo">
+                    <img src="assets/peyamner.png" alt="Payamner Media Network" class="featured-logo">
+                    <img src="assets/myerbil.jfif" alt="My Erbil Media Network" class="featured-logo">
+                    <img src="assets/dijla.png" alt="Dijla Media Network" class="featured-logo">
                     </div>
             </div>
         </section>
@@ -122,16 +138,22 @@
                 <div class="footer-contact">
                     <h3>Contact Info</h3>
                     <div class="footer-contact-item">
+                        <a href="tel:07519055747" class="footer-contact-link">
                         <img src="https://c.animaapp.com/me6w5kmneeC4Hg/img/-pngtree-white-call-icon-png-3562069-1.png" alt="Phone">
                         <span>0751 905 5747</span>
+                        </a>
                     </div>
                     <div class="footer-contact-item">
-                        <img src="https://c.animaapp.com/me6w5kmneeC4Hg/img/email-envelope-white-icon-1-1.png" alt="Email">
-                        <span>Kanz.antiques@gmail.com</span>
+                        <a href="mailto:Kanz.antiques@gmail.com" class="footer-mail-link">
+                            <img src="https://c.animaapp.com/me6w5kmneeC4Hg/img/email-envelope-white-icon-1-1.png" alt="Email">
+                            <span>Kanz.antiques@gmail.com</span>
+                        </a>
                     </div>
                     <div class="footer-contact-item">
-                        <img src="https://c.animaapp.com/me6w5kmneeC4Hg/img/email-envelope-white-icon-1-1.png" alt="Email">
-                        <span>Ayman@kanz.krd</span>
+                        <a href="mailto:Ayman@kanz.krd" class="footer-mail-link">
+                            <img src="https://c.animaapp.com/me6w5kmneeC4Hg/img/email-envelope-white-icon-1-1.png" alt="Email">
+                            <span>Ayman@kanz.krd</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -156,11 +178,11 @@
                 <div class="footer-social">
                     <h3>Follow Us</h3>
                     <div class="footer-social-links">
-                        <a href="#" class="footer-social-item">
+                        <a href="https://www.instagram.com/kanz.classics/" class="footer-social-item">
                             <img src="https://c.animaapp.com/me6w5kmneeC4Hg/img/2-22629-instagram-png-1.png" alt="Instagram">
                             <span>Kanz.classics</span>
                         </a>
-                        <a href="#" class="footer-social-item">
+                        <a href="https://wa.me/447775385077" class="footer-social-item">
                             <img src="https://c.animaapp.com/me6w5kmneeC4Hg/img/whatsapp-1.png" alt="WhatsApp">
                             <span>+44 7775 385077</span>
                         </a>

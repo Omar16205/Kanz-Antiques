@@ -133,15 +133,18 @@ document.addEventListener('DOMContentLoaded', function() {
         { month: 'DEC', day: '25', name: 'Christmas Sale', desc: 'Find the perfect timeless gift with exclusive discounts on selected items.', loc: 'Erbil International Fair, Erbil', time: '10:00 AM - 7:00 PM' }
     ];
     const previousEvents = [
-        { month: 'JUN', day: '20', name: 'Art Deco Showcase', desc: 'A look back at the elegance and glamour of the Art Deco period. Event concluded.', loc: 'Sulaymaniyah Gallery, Sulaymaniyah', time: '10:00 AM - 7:00 PM' },
-        { month: 'APR', day: '12', name: 'Spring Auction 2025', desc: 'Featured rare ceramics and silverware from the 18th century. Event concluded.', loc: 'Erbil International Fair, Erbil', time: '10:00 AM - 7:00 PM' },
-        { month: 'JAN', day: '15', name: 'New Year Exhibition', desc: 'Celebrated the new year with a display of historical timepieces. Event concluded.', loc: 'Kanz Antiques Showroom, Erbil', time: '10:00 AM - 7:00 PM' },
-        { month: 'NOV', day: '18', name: '2024 Grand Auction', desc: 'Our biggest auction of 2024, featuring items from around the globe. Event concluded.', loc: 'Baghdad Convention Center, Baghdad', time: '9:00 AM - 6:00 PM' }
+        { month: 'NOV', day: '22', name: 'Youth Bazar 2024', desc: 'An event for young innovators & creators to showcase their talents and ideas, empowering the next generation for a brighter future! 16,000+ visitors . Event concluded.', loc: 'Babylon media -  Erbil, Kurdistan Iraq ', time: 'November 22-23' },
+        { month: 'APR', day: '3', name: 'Oral cancer awareness campaign 2025', desc: 'A fundraising event with proceeds going to nanakali hospital assisting them in providing critical healthcare services, including oral cancer treatment to underserved populations . Event concluded.', loc: 'Sami AbdulRahman Park - Erbil, Kurdistan Iraq', time: 'April 3-4' },
+        { month: 'APR', day: '9', name: 'Erbil international book fair 2025', desc: 'A major annual cultural event in the capital of Kurdistan featuring hundreds of publishers and offering a wide array of books, along with cultural and intellectual activities.80,000+ visitors  . Event concluded.', loc: 'Sami AbdulRahman park - fair grounds ', time: 'April 9-19' },
+        { month: 'APR', day: '17', name: 'UKH X HMU dentistry 2025', desc: 'A collaborative dentistry event by university of Kurdistan hawker and hawler medical university for students . Event concluded.', loc: 'UKH school of medicine campus ', time: 'April 9-19' },
+        { month: 'APR', day: '26', name: 'British grammar school 2025', desc: 'A on campus marketplace filled with activities, shopping stalls and food for students along with their family and friends . Event concluded.', loc: 'British grammar school - Erbil Kurdistan Iraq  ', time: 'April 26' },
+        { month: 'APR', day: '28', name: 'Knowledge university festival 2025', desc: 'A on campus festival for students . Event concluded.', loc: 'Knowledge university - Erbil Kurdistan Iraq  ', time: 'April 28' },
+        { month: 'MAY', day: '2', name: 'Shanadar park trade festival and local production 2025', desc: 'Organized by the Kurdistan Regional Government, a spring event for local businesses showcasing their products . Event concluded.', loc: 'Shanadar park - Erbil Kurdistan Iraq ', time: 'May 2-7' }
     ];
     const eventsGrid = document.getElementById('events-grid-container');
     const tabs = document.querySelectorAll('.tab-btn');
 
-    // FIX: Made event rendering more efficient.
+    
     function renderEvents(events) {
         if (!eventsGrid) return;
         if (events.length === 0) {
@@ -232,4 +235,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, { threshold: 0.5 });
     if (statsContainer) observer.observe(statsContainer);
+
+
 });
+
+
+
+
+
+
