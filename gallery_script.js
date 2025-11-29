@@ -32,9 +32,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            const targetHref = this.getAttribute('href');
+
+            // FIX: If the link is not a hash link (points to a file), close menu and let the browser navigate normally.
+            if (!targetHref.startsWith('#')) {
+                toggleMobileMenu(true);
+                return; 
+            }
+            
+            // If it IS a local hash link, prevent default and handle smooth scrolling.
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+            const targetElement = document.querySelector(targetHref);
             
             toggleMobileMenu(true);
             
@@ -499,9 +507,18 @@ document.addEventListener('DOMContentLoaded', function() {
         artifactsGrid.innerHTML = '';
         
         pageArtifacts.forEach((artifact, index) => {
-            const availabilityClass = artifact.availability === 'Sold Out' ? 'sold-out' : 'available';
-            const availabilityText = artifact.availability === 'Sold Out' ? 'Sold Out' : 'Available';
             
+            let availabilitySpan = '';
+            // Only display status if it is "Sold Out"
+            if (artifact.availability === 'Sold Out') {
+                const availabilityClass = 'sold-out';
+                const availabilityText = 'Sold Out';
+                availabilitySpan = `<span class="artifact-location ${availabilityClass}">${availabilityText}</span>`;
+            } else {
+                // If "Available", the span is empty and defaults to be visually hidden by CSS
+                availabilitySpan = '<span class="artifact-location"></span>';
+            }
+
             const artifactHTML = `
                 <div class="artifact-card" data-category="${artifact.category}" data-id="${artifact.id}">
                     <img src="${artifact.image}" alt="${artifact.title}" class="artifact-image">
@@ -511,7 +528,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="artifact-description">${artifact.description}</p>
                         <div class="artifact-divider"></div>
                         <div class="artifact-footer">
-                            <span class="artifact-location ${availabilityClass}">${availabilityText}</span>
+                            ${availabilitySpan} 
                             <button class="view-details-btn">View Details</button>
                         </div>
                     </div>
