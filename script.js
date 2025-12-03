@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // FIX: Added a check to only run if the menu is active.
     document.addEventListener('click', (e) => {
         if (mobileMenu && mobileMenu.classList.contains('active') && !hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
             toggleMobileMenu(true);
@@ -180,11 +179,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 renderEvents(eventData);
             });
         });
-        renderEvents(upcomingEvents); // Initial render
+        renderEvents(upcomingEvents);
     }
 
-    // --- Initialize Everything ---
-    // Event Listeners
     document.querySelector('.prev')?.addEventListener('click', prevImage);
     document.querySelector('.next')?.addEventListener('click', nextImage);
     document.querySelector('.prev-mobile')?.addEventListener('click', prevImage);
@@ -193,13 +190,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll for all anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            if (this.classList.contains('mobile-nav-link')) return; // handled separately
+            if (this.classList.contains('mobile-nav-link')) return;
             e.preventDefault();
             document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
         });
     });
 
-    // Scroll-based animations
     let ticking = false;
     window.addEventListener('scroll', () => {
         if (!ticking) {
@@ -212,11 +208,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Initial state calls
     updateCarousel();
     handleScrollAnimations();
 
-    // Intersection Observer for stats
     const statsContainer = document.querySelector('.stats-container');
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
