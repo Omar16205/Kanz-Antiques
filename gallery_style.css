@@ -34,7 +34,7 @@ body {
         inset -1px 0 1px rgba(0, 0, 0, 0.11);
 }
 
-/* New Navigation Styles */
+/* Navigation Styles */
 .nav-container {
     position: fixed;
     top: 20px;
@@ -269,16 +269,11 @@ body {
     font-family: 'Georgia', serif;
     font-weight: bold;
     font-size: 64px;
-    
-    /* REMOVE complex background/clipping properties */
     background: none; 
     -webkit-background-clip: unset;
     background-clip: unset;
     -webkit-text-fill-color: initial;
-    
-    /* Apply the gold color directly */
     color: #D69E3C; 
-    
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 20px;
     letter-spacing: 0.32px;
@@ -287,7 +282,6 @@ body {
 .main-subtitle {
     font-family: 'Georgia', serif;
     font-style: italic;
-    /* Set the text color to white */
     color: #FFFFFF;
     font-size: 18px;
     letter-spacing: 0.09px;
@@ -635,30 +629,27 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .star-rating {
-    color: #ffc107; /* Gold/Yellow for stars */
+    color: #ffc107; 
     font-size: 1.1em;
     letter-spacing: 0.1em;
 }
 
-/* MODAL SPECS: 'Available' will now use the default dark color */
 .sold-out-text {
-    color: #dc3545; /* Red for sold out */
+    color: #dc3545; 
     font-weight: 600;
 }
 
 /* --- ARTIFACT GRID AVAILABILITY STYLING --- */
-
-/* Base style: makes text effectively disappear on the card if not 'sold-out' */
 .artifact-location {
     color: transparent; 
     font-size: 0; 
 }
 
 .artifact-location.sold-out {
-    color: #dc3545; /* Red */
+    color: #dc3545; 
     font-weight: 500;
     font-style: normal;
-    font-size: 16px; /* Restore size only for sold-out */
+    font-size: 16px; 
 }
 
 /* Modal Styles */
@@ -740,20 +731,18 @@ body {
 .modal-image-section {
     flex: 1;
     display: flex;
-    /* CHANGE: Stack main image and thumbnails vertically */
     flex-direction: column; 
     align-items: center;
     justify-content: flex-start;
     padding: 40px;
     background: rgba(249, 246, 237, 0.3);
-    overflow-y: auto; /* Allow scrolling if content is too tall */
+    overflow-y: auto; 
     gap: 20px;
 }
 
-/* Container for the single large image */
 .modal-main-image-container {
     width: 100%;
-    max-height: 450px; /* Limits the height of the main image view */
+    max-height: 450px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -763,11 +752,11 @@ body {
 
 .modal-image {
     max-width: 100%;
-    max-height: 100%; /* Fill container height */
+    max-height: 100%; 
     object-fit: contain;
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    transition: opacity 0.3s ease; /* For smooth image switching */
+    transition: opacity 0.3s ease; 
 }
 
 /* Thumbnail Strip for multiple images */
@@ -778,7 +767,7 @@ body {
     gap: 10px;
     padding: 10px 0;
     width: 100%;
-    overflow-x: auto; /* Allow horizontal scrolling for many thumbnails */
+    overflow-x: auto; 
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -797,7 +786,7 @@ body {
 .thumbnail-image:hover,
 .thumbnail-image.active {
     opacity: 1;
-    border-color: #d4625a; /* Highlight the active/hovered thumbnail */
+    border-color: #d4625a; 
     box-shadow: 0 0 10px rgba(212, 98, 90, 0.5);
 }
 .modal-details-section {
@@ -1203,14 +1192,12 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* --- Modal Fixes --- */
     .modal-content {
         width: 95%;
         max-height: 95vh;
     }
     
     .modal-body {
-        /* Stacks image and details sections vertically */
         flex-direction: column;
     }
 
@@ -1239,8 +1226,7 @@ body {
     .modal-title {
         font-size: 24px;
     }
-    
-    /* --- General Mobile Layout & Footer --- */
+
     .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;

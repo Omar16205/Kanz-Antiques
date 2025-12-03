@@ -649,16 +649,13 @@ header {
     padding: 40px 0;
 }
 
-/* --- MOBILE OPTIMIZATION (Max-width 768px) --- */
 @media (max-width: 768px) {
     
     .events-section {
-        /* Reduce horizontal padding on small screens */
         padding: 60px 20px; 
     }
 
     .events-title {
-        /* Reduce font size for readability */
         font-size: 40px; 
     }
 
@@ -667,21 +664,17 @@ header {
     }
 
     .events-tabs {
-        /* Allow tabs to wrap if necessary */
         flex-wrap: wrap; 
-        /* Space the tabs out better when they wrap */
         gap: 10px; 
     }
 
     .tab-btn {
-        /* Use fluid units to prevent overflow and ensure tabs are still legible */
         flex-grow: 1;
         font-size: 16px;
         padding: 10px 15px;
     }
 
     .events-grid {
-        /* Force a single column layout on mobile */
         grid-template-columns: 1fr; 
         gap: 20px;
     }
@@ -691,17 +684,14 @@ header {
     }
 
     .event-name {
-        /* Slightly reduce event name font size */
         font-size: 22px; 
     }
 
     .event-date {
-        /* Slightly reduce date block padding on mobile */
         padding: 10px; 
     }
     
     .event-day {
-        /* Slightly reduce the size of the day number */
         font-size: 30px; 
     }
 }
@@ -1060,7 +1050,6 @@ header {
 
 /* ==== Responsive Design ==== */
 
-/* Combined styles for tablets and mobile */
 @media (max-width: 1024px) {
     .nav-container {
         display: none;
@@ -1122,7 +1111,6 @@ header {
     }
 }
 
-/* Smaller tablets and large phones */
 @media (max-width: 768px) {
     header {
         padding: 20px;
@@ -1196,7 +1184,6 @@ header {
     }
 }
 
-/* Most mobile phones */
 @media (max-width: 480px) {
     .carousel-container {
         padding: 25px 10px;

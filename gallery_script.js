@@ -34,13 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             const targetHref = this.getAttribute('href');
 
-            // FIX: If the link is not a hash link (points to a file), close menu and let the browser navigate normally.
             if (!targetHref.startsWith('#')) {
                 toggleMobileMenu(true);
                 return; 
             }
-            
-            // If it IS a local hash link, prevent default and handle smooth scrolling.
+
             e.preventDefault();
             const targetElement = document.querySelector(targetHref);
             
@@ -99,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return stars;
     }
     
+    //Category and Subcategory Structure
     const categoryStructure = {
         'books': {
             name: 'Books',
@@ -142,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    // Artifact information structure 
     const allArtifacts = [
         {
             id: 1,
@@ -509,13 +509,11 @@ document.addEventListener('DOMContentLoaded', function() {
         pageArtifacts.forEach((artifact, index) => {
             
             let availabilitySpan = '';
-            // Only display status if it is "Sold Out"
             if (artifact.availability === 'Sold Out') {
                 const availabilityClass = 'sold-out';
                 const availabilityText = 'Sold Out';
                 availabilitySpan = `<span class="artifact-location ${availabilityClass}">${availabilityText}</span>`;
             } else {
-                // If "Available", the span is empty and defaults to be visually hidden by CSS
                 availabilitySpan = '<span class="artifact-location"></span>';
             }
 
