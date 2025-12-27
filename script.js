@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     // --- Carousel Data ---
     const carouselData = [
-        { src: "assets/antique painting.jpg", caption: "'The Swing' by Jean-Honoré Fragonard, 1767" },
-        { src: "assets/victorian-vase.jpg", caption: "Rare Victorian Porcelain Vase, circa 1850" },
-        { src: "assets/grandfather-clock.jpg", caption: "Georgian Grandfather Clock, 18th Century" },
-        { src: "assets/antique-furniture.jpg", caption: "Louis XVI Mahogany Writing Desk, 1780" },
-        { src: "assets/chinese-ceramics.jpg", caption: "Ming Dynasty Ceramic Bowl, 15th Century" }
+        { src: "assets/KanzProducts/IMG_0177.PNG", caption: "Historical Soviet memorabilia" },
+        { src: "assets/KanzProducts/IMG_0198.PNG", caption: "Collectible and unique items and display pieces" },
+        { src: "assets/KanzProducts/IMG_0191.PNG", caption: "Antique gifts and pieces from around the world" },
+        { src: "assets/KanzProducts/IMG_0178.PNG", caption: "French vases" },
+        { src: "assets/KanzProducts/photo_5870602308427648179_y.jpg", caption: "And so much more..." }
     ];
     let currentIndex = 0;
 
